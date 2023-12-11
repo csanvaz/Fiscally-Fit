@@ -1,0 +1,37 @@
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class TransactionsControllerTest {
+
+    private TransactionsController controller;
+
+    @BeforeEach
+    public void setUp() {
+        // Initialize your TransactionsController here
+        controller = new TransactionsController();
+        // Simulate the JavaFX environment setup if necessary
+    }
+
+    @Test
+    public void testLabelsWithFloats() {
+        // Simulate setting label text with float values
+        controller.foodLabel.setText("Food: " + 123.45f);
+        controller.utilitiesLabel.setText("Utilities: " + 678.90f);
+
+        assertEquals("Food: 123.45", controller.foodLabel.getText(), "Food label does not handle floats correctly.");
+        assertEquals("Utilities: 678.9", controller.utilitiesLabel.getText(), "Utilities label does not handle floats correctly.");
+    }
+
+    @Test
+    public void testLabelsWithLargeNumbers() {
+        // Simulate setting label text with large numbers
+        controller.otherLabel.setText("Other: " + 12345678);
+        controller.entertainmentLabel.setText("Entertainment: " + 987654321);
+
+        assertEquals("Other: 12345678", controller.otherLabel.getText(), "Other label does not handle large numbers correctly.");
+        assertEquals("Entertainment: 987654321", controller.entertainmentLabel.getText(), "Entertainment label does not handle large numbers correctly.");
+    }
+
+    // Add more tests as needed
+}

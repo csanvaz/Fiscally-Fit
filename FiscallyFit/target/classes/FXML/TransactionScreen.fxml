@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="root4" maxHeight="600.0" maxWidth="335.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TransactionsController">
+    <center>
+        <VBox alignment="CENTER" prefHeight="221.0" prefWidth="357.0" spacing="20" style="-fx-background-color: #60A3D9;" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="monthButtonP" layoutX="149.0" layoutY="26.0" mnemonicParsing="false" onAction="#monthPieChart" text="Month" />
+                        <Button fx:id="weekButtonP" layoutX="75.0" layoutY="26.0" mnemonicParsing="false" onAction="#weekPieChart" text="Week" />
+                        <Text fill="WHITE" layoutX="14.0" layoutY="13.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Pie Chart By:" wrappingWidth="110.0" />
+                        <Button fx:id="yearButtonP" layoutX="224.0" layoutY="26.0" mnemonicParsing="false" onAction="#YearPieChart" text="Year" />
+                    </children>
+                </AnchorPane>
+            <Label fx:id="sumT" text="Week Summary">
+               <VBox.margin>
+                  <Insets right="220.0" />
+               </VBox.margin></Label>
+                <!-- Labels to display pie chart data -->
+                <Label fx:id="otherLabel" text="Other: ">
+               <VBox.margin>
+                  <Insets right="145.0" />
+               </VBox.margin></Label>
+                <Label fx:id="utilitiesLabel" text="Utilities: ">
+               <VBox.margin>
+                  <Insets right="140.0" />
+               </VBox.margin></Label>
+                <Label fx:id="foodLabel" text="Food: ">
+               <VBox.margin>
+                  <Insets right="150.0" />
+               </VBox.margin></Label>
+                <Label fx:id="entertainmentLabel" text="Entertainment: ">
+               <VBox.margin>
+                  <Insets right="105.0" />
+               </VBox.margin></Label>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </center>
+    <top>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <AnchorPane prefHeight="56.0" prefWidth="357.0" style="-fx-background-color: #60A3D9;">
+                    <children>
+                        <!-- TRANSACTION SUMMARY Title -->
+                        <Text fill="WHITE" layoutX="90.0" layoutY="33.0" text="TRANSACTION SUMMARY" wrappingWidth="170.0546875">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                        <Button alignment="CENTER_RIGHT" layoutX="270.0" layoutY="15.0" mnemonicParsing="false" onAction="#BudgetButton" text="Budget" />
+                        <!-- Home Button -->
+                        <Button layoutX="29.0" layoutY="15.0" mnemonicParsing="false" onAction="#HomeButton" prefHeight="16.0" prefWidth="44.0" text="&lt;" />
+                    </children>
+                </AnchorPane>
+                <Pane fx:id="pieChart" layoutY="56.0" prefHeight="273.0" prefWidth="357.0" />
+            </children>
+        </AnchorPane>
+    </top>
+</BorderPane>

@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: TransactionsControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.545 s <<< FAILURE! - in TransactionsControllerTest
+testLabelsWithFloats  Time elapsed: 0.53 s  <<< ERROR!
+java.lang.ExceptionInInitializerError
+	at TransactionsControllerTest.setUp(TransactionsControllerTest.java:12)
+Caused by: java.lang.IllegalStateException: Toolkit not initialized
+	at TransactionsControllerTest.setUp(TransactionsControllerTest.java:12)
+
+testLabelsWithLargeNumbers  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class javafx.scene.control.Label
+	at TransactionsControllerTest.setUp(TransactionsControllerTest.java:12)
+Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionInInitializerError [in thread "main"]
+	at TransactionsControllerTest.setUp(TransactionsControllerTest.java:12)
+
